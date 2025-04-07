@@ -1,1 +1,76 @@
+/*! modern-normalize | MIT License | https://github.com/sindresorhus/modern-normalize */
+/* Normalize styles... */
 
+/* Design System Variables */
+:root {
+    /* Colors */
+    --primary: #003366;
+    --primary-dark: #002240;
+    --secondary: #f1c40f;
+    --accent: #007BFF;
+    --text: #333333;
+    --text-light: #ffffff;
+    --background: #f8f9fa;
+    --gray-100: #f1f3f5;
+    
+    /* Typography */
+    --font-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-alt: 'Georgia', serif;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: var(--font-base);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+/* Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--text-light);
+}
+
+/* Header Styles */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-md);
+}
+
+/* Hero Slider */
+.hero-slider {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Mobile styles... */
+}
