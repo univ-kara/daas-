@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Université de Kara</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Navigation items -->
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="dashboard-content">
+            <header class="content-header">
+                <h1>Tableau de Bord</h1>
+                <div class="user-profile">
+                    <span>John Doe</span>
+                    <img src="assets/images/user-avatar.jpg" alt="Profile">
+                </div>
+            </header>
+            
+            <section class="grades-section">
+                <h2>Notes par Matière</h2>
+                <div class="table-responsive">
+                    <table class="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Matière</th>
+                                <th>Semestre</th>
+                                <th>Crédits</th>
+                                <th>Moyenne</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically populated -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="assets/js/dashboard.js" type="module"></script>
+</body>
+</html>
