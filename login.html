@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Université de Kara</title>
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <img src="assets/images/logo.svg" alt="Université de Kara" class="auth-logo">
+                <h1>Connexion Étudiant</h1>
+            </div>
+            
+            <form id="loginForm" class="auth-form" novalidate>
+                <div class="form-group">
+                    <label for="faculty">Faculté</label>
+                    <select id="faculty" name="faculty" required>
+                        <option value="" disabled selected>Sélectionnez votre faculté</option>
+                        <option value="FSS">Faculté des Sciences de Santé (FSS)</option>
+                        <option value="FAST">Faculté des Sciences et Techniques (FAST)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentId">Identifiant</label>
+                    <input type="text" id="studentId" name="studentId" 
+                           pattern="[0-9]{9}" 
+                           title="9 chiffres (ex: 123456789)"
+                           required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password"
+                           pattern=".{8,}"
+                           title="8 caractères minimum"
+                           required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    Se connecter
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="assets/js/auth.js" type="module"></script>
+</body>
+</html>
