@@ -1,1 +1,125 @@
+/*! Dashboard Styles - Université de Kara */
+/* Design System Variables */
+:root {
+    --sidebar-width: 280px;
+    --header-height: 80px;
+    --transition-speed: 0.3s;
+}
 
+/* Layout Structure */
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+    background-color: var(--gray-50);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--primary-dark);
+    color: white;
+    padding: var(--space-lg);
+    transition: transform var(--transition-speed) ease;
+    z-index: 100;
+}
+
+.sidebar-nav {
+    margin-top: var(--space-xl);
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-xs);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-speed);
+}
+
+.sidebar-link.active {
+    background-color: var(--primary);
+}
+
+.sidebar-link:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Area */
+.dashboard-content {
+    grid-column: 2;
+    padding: var(--space-lg);
+    margin-left: var(--sidebar-width);
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Tables */
+.table-responsive {
+    overflow-x: auto;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    background: white;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grades-table th {
+    background: var(--primary);
+    color: white;
+    padding: var(--space-md);
+    text-align: left;
+}
+
+.grades-table td {
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.grades-table tr:last-child td {
+    border-bottom: none;
+}
+
+.grades-table tr:hover {
+    background-color: var(--gray-50);
+}
+
+/* Status Indicators */
+.grade-A { color: var(--success); }
+.grade-B { color: var(--info); }
+.grade-C { color: var(--warning); }
+.grade-F { color: var(--danger); }
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .dashboard-content {
+        margin-left: 0;
+        padding: var(--space-md);
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
