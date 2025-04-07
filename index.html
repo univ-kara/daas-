@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université de Kara - Plateforme Étudiante</title>
+    <meta name="description" content="Portail étudiant de l'Université de Kara">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Header Component -->
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="brand-logo">
+                <img src="assets/images/logo.svg" alt="Université de Kara" width="180" height="60">
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul>
+                    <li><a href="/" class="active">Accueil</a></li>
+                    <li><a href="#">Programmes</a></li>
+                    <li><a href="#">Événements</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-outline">Espace Étudiant</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="assets/images/hero-1.jpg" alt="Campus universitaire" loading="lazy">
+                <div class="slide-content">
+                    <h1>Excellence Académique</h1>
+                    <p>Découvrez nos programmes de formation de qualité</p>
+                </div>
+            </div>
+            <!-- Additional slides... -->
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide" aria-label="Précédent">‹</button>
+            <button class="next-slide" aria-label="Suivant">›</button>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Featured Sections... -->
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Footer sections... -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Université de Kara. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+  </html>
